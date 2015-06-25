@@ -92,6 +92,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
+ '(require-final-newline (quote visit-save))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -130,6 +131,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq comint-scroll-to-bottom-on-input t)
 (setq comint-scroll-to-bottom-on-output t)
 (setq comint-move-point-for-output t)
+(setq ess-close-paren-offset '(0))
 (defun my-ess-start-R ()
   (interactive)
   (if (not (member "*R*" (mapcar (function buffer-name) (buffer-list))))
