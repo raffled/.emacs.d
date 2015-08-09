@@ -35,7 +35,6 @@
 ;; (provide 'grey.theme)
 ;; (grey.theme)
 
-
 ;paren matching options
 (setq show-paren-delay 0)
 (show-paren-mode t)
@@ -91,11 +90,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (wombat)))
+ '(custom-enabled-themes (quote (darktooth)))
  '(custom-safe-themes (quote ("36affb6b6328d2bfa7a31b3183cd65d6dd1a8c0945382f94de729233b9737359" default)))
  '(inhibit-startup-screen t)
- '(pos-tip-background-color "#36473A")
- '(pos-tip-foreground-color "#FFFFC8")
  '(require-final-newline (quote visit-save))
  '(show-paren-mode t))
 (custom-set-faces
@@ -257,5 +254,3 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;; You might already have this line
-(add-to-list 'load-path "~/.emacs.d/elpa/")
-(load-theme 'darktooth)
